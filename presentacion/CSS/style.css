@@ -4,6 +4,7 @@
     margin: 0;
     position: relative;
     top: 48px;
+    overflow-x: hidden;
 }
 
 main {
@@ -40,6 +41,7 @@ body h1 {
     left: 0;
     width: 100%;
     z-index: 100;
+    padding: 0px 137px;
 }
 
 /* Style the navigation bar links */
@@ -48,7 +50,7 @@ float: left;
 display: block;
 color: white;
 text-align: center;
-padding: 14px 20px;
+padding: 12px 20px;
 text-decoration: none;
 }
 
@@ -59,6 +61,39 @@ float: right;
 
 /* Cambiar color al pasar el mouse */
 .nav_bar a:hover {
+background-color: #ddd;
+color: black;
+}
+
+.nav_bar_2 {
+    overflow: visible;
+    background-color: rgb(123, 125, 131);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    margin: 0px -85px;
+}
+
+/* Style the navigation bar links */
+.nav_bar_2 a {
+float: left;
+display:-moz-groupbox;
+color: white;
+text-align: center;
+padding: 14px 20px;
+text-decoration: none;
+background-color: rgb(123, 125, 131);
+}
+
+/* Right-aligned link */
+.nav_bar_2 a.right {
+float: right;
+}
+
+/* Cambiar color al pasar el mouse */
+.nav_bar_2 a:hover {
 background-color: #ddd;
 color: black;
 }
@@ -80,18 +115,19 @@ a {
 }
 
 .contact {
-    padding: 20px;
+    padding: 10px;
     text-align: center;
     position: relative;
-    bottom: 380px;
+    bottom: 320px;
     font-size: 25px;
 }
 
-footer {
+.footer {
     color: black;
     text-align: center;
     position: relative;
-    top: 10px;
+    top: 60px;
+
 }
 
 .info {
@@ -169,4 +205,11 @@ h2 {
     left: 550px;
     margin-right: 550px;
     font-size: 25px;
+}
+
+.proximamente {
+    position: relative;
+    text-align: center;
+    font-size: 50px;
+    top: 80px;
 }
