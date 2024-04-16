@@ -7,8 +7,16 @@
     overflow-x: hidden;
 }
 
-main {
-    height: 1100px;
+.main {
+    height: 900px;
+}
+
+.main_2 {
+    height: 600px;
+}
+
+.main_3 {
+    height: 450px;
 }
 
 body h1 {
@@ -65,39 +73,6 @@ background-color: #ddd;
 color: black;
 }
 
-.nav_bar_2 {
-    overflow: visible;
-    background-color: rgb(123, 125, 131);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
-    margin: 0px -85px;
-}
-
-/* Style the navigation bar links */
-.nav_bar_2 a {
-float: left;
-display:-moz-groupbox;
-color: white;
-text-align: center;
-padding: 14px 20px;
-text-decoration: none;
-background-color: rgb(123, 125, 131);
-}
-
-/* Right-aligned link */
-.nav_bar_2 a.right {
-float: right;
-}
-
-/* Cambiar color al pasar el mouse */
-.nav_bar_2 a:hover {
-background-color: #ddd;
-color: black;
-}
-
 a {
     position: relative;
     left: 81%;
@@ -114,26 +89,22 @@ a {
     font-weight: bolder;
 }
 
-.contact {
-    padding: 10px;
-    text-align: center;
-    position: relative;
-    bottom: 320px;
-    font-size: 25px;
-}
-
 .footer {
     color: black;
     text-align: center;
-    position: relative;
-    top: 60px;
+}
 
+.contact {
+    padding: 10px;
+    font-size: 25px;
 }
 
 .info {
     color: black;
-    font-size: 23px;
+    font-size: 30px;
     text-align: center;
+    position: relative;
+    top: 40px;
 } 
 
 .pos_map {
@@ -210,6 +181,6 @@ h2 {
 .proximamente {
     position: relative;
     text-align: center;
-    font-size: 50px;
-    top: 80px;
+    font-size: 30px;
+    top: 40px;
 }
