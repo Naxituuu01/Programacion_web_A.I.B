@@ -1,60 +1,71 @@
-.fondo  {
-    background-color: rgb(199, 201, 207);
-    padding: 0;
-    margin: 0;
-    position: relative;
-    top: 48px;
-    overflow-x: hidden;
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: Century Gothic;
 }
 
-.main {
-    height: 900px;
+body{
+    background-color: #ededed;
 }
 
-.main_2 {
-    height: 600px;
+main{
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.main_3 {
-    height: 450px;
+.in-flex{
+    flex: 1;
+    min-width: 250px;
 }
 
-body h1 {
+.in-flex:first-of-type{
+    flex: 2;
+    padding: 25px;
+    background-color: #fff;
+    margin: 20px;
+}
+
+.in-flex section{
+    padding: 25px;
+    background-color: #fff;
+    margin: 20px;
+}
+
+.info{
+    padding: 0px;
+    background-color: #3378b9;
+    margin: 0px;
+    
+}
+
+.info_2{
+    padding: 10px;
+    background-color: #3378b9;
+    margin: 10px;
     text-align: center;
+}
+
+.info a{
     position: relative;
     bottom: 110px;
-    margin: 0%;
-    font-family:'Times New Roman', Times, serif;
-    font-size: 30px;
-    color: black;
-}
-
-.one {
-    background-color: rgb(162, 164, 170);
-    margin: 0%;
-}
-
-.logo {
-    position: relative;
-    height: 190px;
-    left: 10px;
-    top: 10px;
+    font-size: 50px;
 }
 
 .nav_bar {
     overflow: hidden;
     background-color: rgb(123, 125, 131);
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 100;
-    padding: 0px 137px;
+    padding: 0px 0px;
+    text-align: center;
+    min-width: 250px;
 }
 
-/* Style the navigation bar links */
 .nav_bar a {
-float: left;
+float: right;
 display: block;
 color: white;
 text-align: center;
@@ -62,87 +73,53 @@ padding: 12px 20px;
 text-decoration: none;
 }
 
-/* Right-aligned link */
 .nav_bar a.right {
 float: right;
 }
 
-/* Cambiar color al pasar el mouse */
 .nav_bar a:hover {
 background-color: #ddd;
 color: black;
 }
 
-a {
+.logo{
     position: relative;
-    left: 81%;
+    min-width: 5%;
+    left: 20px;
+    width: 78%;
 }
 
-.info_index {
-    padding: 50px;
-    width: 600px;
-    color: black;
-    font-size: 22px;
-    position: relative;
-    left: 750px;
-    top: 60px;
-    font-weight: bolder;
-}
-
-.footer {
-    color: black;
+.li{
     text-align: center;
+    position: relative;
 }
 
-.contact {
+.info_index p{
     padding: 10px;
-    font-size: 25px;
+    font-size: 20px;
 }
 
-.info {
-    color: black;
-    font-size: 30px;
-    text-align: center;
+
+.contact{
     position: relative;
     top: 40px;
-} 
-
-.pos_map {
-    color: black;
-    font-size: 40px;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    font-family: lato;
-    color: black;
-}
-
-h2 {
+.footer{
     position: relative;
-    left: 30%;
-    font-size: 2rem;
-    padding-top: 50px;
+    text-align: center;
 }
 
 .slider-frame {
-	width: 600px;
-    height: auto;
-	margin:50px auto 0;
+
 	overflow: hidden;
-    right: 350px;
     position: relative;
     text-align: center;
-    bottom: 680px;
-    font-size: 25px;
 }
 
 .slider-frame ul {
 	display: flex;
-	padding: 0;
 	width: 400%;
-	
 	animation: slide 20s infinite alternate ease-in-out;
 }
 
@@ -152,7 +129,7 @@ h2 {
 }
 
 .slider-frame img {
-	width: 100%;
+	width: 80%;
 }
 
 @keyframes slide {
@@ -169,18 +146,52 @@ h2 {
 	100% {margin-left: -300%;}
 }
 
-.mapa {
-    position: relative;
+.proximo{
     text-align: center;
-    top: 80px;
-    left: 550px;
-    margin-right: 550px;
-    font-size: 25px;
+    img{
+        min-width: 250px;
+    }
 }
 
-.proximamente {
-    position: relative;
-    text-align: center;
-    font-size: 30px;
-    top: 40px;
+.map_m{
+    max-width:100%;
+}
+
+.cards-containar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start; 
+    justify-content: space-between;
+}
+
+.card {
+    width: 300px;
+    height: 300px;
+    margin: 0px;
+}
+
+#contenedor-modal {
+    display: none; /* Inicialmente oculto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Capa semi-transparente */
+    z-index: 100; /* Asegurar que el modal esté encima de otro contenido */
+}
+
+.contenido-modal {
+    background-color: white;
+    margin: 150px auto; /* Centrar el contenido del modal verticalmente */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 500px; /* Ajusta el ancho según sea necesario */
+}
+
+#cerrar-modal {
+    float: right; /* Posicionar el botón de cierre */
+    cursor: pointer;
 }
