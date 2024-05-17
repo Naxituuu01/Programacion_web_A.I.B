@@ -38,20 +38,18 @@ triggerElement.addEventListener('click', abrirModal);
 closeButton.addEventListener('click', cerrarModal);
 
 //---------------------------------------------------
-function datos(){
+function datos() {
+  let mail = document.getElementById('mail').value;
+  let fono = document.getElementById('fono').value;
+  let com = document.getElementById('mensaje').value;
+  let nombre = document.getElementById('nombre').value;
 
-  let mail=document.getElementById('mail').value;
-  let fono=document.getElementById('fono').value;
-  let c=document.getElementById('c').value;
-  let nombre=document.getElementById('nombre').value;
-
-  if(nombre!='' & mail!='' & fono !='' & com!=''){
+  if (nombre !== '' && mail !== '' && fono !== '' && com !== '') {
       alert("Datos enviados");
+  } else {
+      alert("Rellene todas las casillas");
   }
-  
-  else{
-      alert("Rellene todas las casillas")
-  }
-};
+}
+
 
 
