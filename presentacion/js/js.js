@@ -10,7 +10,7 @@ function inicia(){
     }
     else{
 
-        alert("Datos Incorrescotos")
+        alert("Datos Incorrectos")
         document.getElementById('user').value=''; 
         document.getElementById('pass').value='';
     }
@@ -44,12 +44,25 @@ function datos() {
   let com = document.getElementById('mensaje').value;
   let nombre = document.getElementById('nombre').value;
 
+  var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (!emailRegex.test(mail)) {
+      alert("Por favor ingrese un correo electrónico válido.");
+      return false;
+  }
+
   if (nombre !== '' && mail !== '' && fono !== '' && com !== '') {
       alert("Datos enviados");
+
+      document.getElementById('mail').value = "";
+      document.getElementById('fono').value = "";
+      document.getElementById('mensaje').value = "";
+      document.getElementById('nombre').value = "";
+
+      // Redirigir a la página deseada
+      window.location.href = 'enviado.html';
   } else {
       alert("Rellene todas las casillas");
+      return false;
   }
 }
-
-
-
