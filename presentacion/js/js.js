@@ -10,7 +10,12 @@ function inicia(){
     }
     else{
 
-        alert("Datos Incorrectos")
+      document.getElementById('mensaje3').textContent = "Usuario o Contraseña incorrecta" ;
+      document.getElementById('mensaje3').style.color='red';
+    setTimeout(() => {
+      document.getElementById('mensaje3').textContent = "" ;
+    }, 2000);
+        
         document.getElementById('user').value=''; 
         document.getElementById('pass').value='';
     }
@@ -47,22 +52,48 @@ function datos() {
   var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   if (!emailRegex.test(mail)) {
-      alert("Por favor ingrese un correo electrónico válido.");
-      return false;
+    document.getElementById('mensaje').textContent = "Por favor ingrese un correo electrónico válido.";
+    document.getElementById('mensaje').style.color = 'red';
+    setTimeout(() => {
+      document.getElementById('mensaje').textContent = "";
+    }, 3000);
+    return false;
   }
 
   if (nombre !== '' && mail !== '' && fono !== '' && com !== '') {
-      alert("Datos enviados");
+    document.getElementById('mensaje2').textContent = "Enviado exitosamente";
+    document.getElementById('mensaje2').style.color = "green";
 
-      document.getElementById('mail').value = "";
-      document.getElementById('fono').value = "";
-      document.getElementById('mensaje').value = "";
-      document.getElementById('nombre').value = "";
+    // Clear form fields and success message after a delay
+    setTimeout(function() {
+      document.getElementById('mail').value = '';
+      document.getElementById('fono').value = '';
+      document.getElementById('nombre').value = '';
+      document.getElementById('mensaje').value = '';
+      document.getElementById('mensaje2').textContent = "";
+    }, 1000); // Adjust delay as needed
 
-      // Redirigir a la página deseada
-      window.location.href = 'enviado.html';
+    return false;
   } else {
-      alert("Rellene todas las casillas");
-      return false;
+    document.getElementById('mensaje2').textContent = "Por favor rellene todos los campos";
+    document.getElementById('mensaje2').style.color = "red";
+    setTimeout(() => {
+      document.getElementById('mensaje2').textContent = "";
+    }, 5000);
+    return false;
   }
+}
+
+//---------------------------------------------------------------------------------
+
+function iniciarMap(){
+  var coord = {lat:-41.4744082 ,lng: -72.9966483};
+  var map = new google.maps.Map(document.getElementById('map'),{
+    zoom: 10,
+    center: coord
+  });
+  var marker = new google.maps.Marker({
+    position: coord,
+    map: map
+  });
 }
